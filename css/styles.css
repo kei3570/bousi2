@@ -229,13 +229,40 @@ header #nav-content .nav_icon a{
 /*main ↓*/
 
 #top_warpper{
-  width:90%;
-  height:600px;
+  width:100%;
+  height:700px;
   margin: 0 auto;
   display: flex;
 }
 
-.main_contents{
+@keyframes slidy {
+  0% { left: 0%; }
+  20% { left: 0%; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; }
+  100% { left: -400%; }
+  }
+  
+  div#slider { overflow: hidden; }
+  div#slider figure img { 
+    width: 20%;
+    height:100%; 
+    float: left; }
+  div#slider figure { 
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 10s slidy infinite; 
+  }
+
+/* .main_contents{
   width:70%;
 }
 
@@ -274,7 +301,7 @@ header #nav-content .nav_icon a{
 .sub_contents img{
   width:100%;
   height:100%;
-}
+} */
 
 
 #product_contents{
@@ -302,7 +329,7 @@ header #nav-content .nav_icon a{
 }
 
 #product_contents ul .product_item2{
-  background-image: url(../img/30812347-コピー-スペースとフリー-テキスト場所日光新鮮な草の自然な背景.jpeg);
+  background-image: url(../img/30812347-コピー-スペースとフリー-テキスト場所日光新鮮な草の自然な背景.jpeg);
 }
 
 #product_contents ul .product_item3{
@@ -578,7 +605,11 @@ footer .navi_icon{
     display: none;
   }
 
-
+  #top_warpper{
+    height:250px;
+    margin-bottom: 100px;
+  }
+/* 
   #top_warpper .main_text h1{
     font-size:50px;
   }
@@ -591,14 +622,19 @@ footer .navi_icon{
     width:100%;
   }
 
+  #top_warpper .main_contents .sub_img {
+    height:auto;
+  }
+
   #top_warpper .main_contents .main_text{
     height:60%;
   }
+  
 
   #top_warpper .main_contents h1{
     margin:0;
     text-align: center;
-  }
+  } */
 
   #news_contents dl{
     width:90%;
